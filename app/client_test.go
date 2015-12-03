@@ -12,5 +12,7 @@ func TestManual(t *testing.T) {
 }
 
 func TestContainer(t *testing.T) {
-
+	container := NewContainer()
+	client := container.get("client").(*Client)
+	client.Use()
 }
